@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-const logoPath = "/Untitled%20Project%20-%20RichText.png";
+const logoPath = `${import.meta.env.BASE_URL}Untitled%20Project%20-%20RichText.png`;
 
 const navItems = [
   ["Home", "home"],
