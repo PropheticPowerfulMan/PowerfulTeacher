@@ -17,6 +17,8 @@ import {
 import { motion } from "framer-motion";
 
 const logoPath = `${import.meta.env.BASE_URL}Untitled%20Project%20-%20RichText.png`;
+const heroImageUrl =
+  "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=3840&q=90";
 
 const navItems = [
   ["Home", "home"],
@@ -181,6 +183,15 @@ function Navbar({
 function Hero() {
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-black-depth px-5 pt-28 sm:px-8">
+      <img
+        src={heroImageUrl}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-[62%_center] opacity-58"
+        loading="eager"
+        fetchPriority="high"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,5,.96)_0%,rgba(5,5,5,.78)_42%,rgba(5,5,5,.42)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_32%,rgba(244,241,234,.2),transparent_24rem),linear-gradient(180deg,rgba(5,5,5,.45)_0%,rgba(5,5,5,.16)_48%,rgba(5,5,5,.92)_100%)]" />
       <CompassField />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-obsidian to-transparent" />
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.08fr_.92fr]">
@@ -224,7 +235,7 @@ function Hero() {
           <div className="absolute inset-0 animate-[spin_26s_linear_infinite] rounded-full border border-dashed border-chrome/20" />
           <div className="absolute inset-16 rotate-45 border border-chrome/10" />
           <div className="absolute inset-0 grid place-items-center">
-            <div className="grid h-72 w-72 place-items-center rounded-full bg-white/[0.03] shadow-chrome backdrop-blur-sm sm:h-96 sm:w-96">
+            <div className="grid h-72 w-72 place-items-center rounded-full border border-white/12 bg-black/42 shadow-chrome backdrop-blur-sm sm:h-96 sm:w-96">
               <img src={logoPath} alt="MYLORD crest" className="h-48 w-48 object-contain drop-shadow-[0_0_34px_rgba(244,241,234,.22)] sm:h-64 sm:w-64" />
             </div>
           </div>
